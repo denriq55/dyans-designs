@@ -1,36 +1,30 @@
 import "./App.css";
 import { useState } from "react";
 import Nav from "./components/Nav";
-import Projects from "./pages/Projects";
-import type { Categories } from "./data/types";
+import Projects from "./pages/MainPage";
+import type { Categories, Project } from "./data/types";
+import { websites } from "./data/websites";
+import { ux } from "./data/ux";
+import { misc } from "./data/misc";
+import { visuals } from "./data/visuals";
 
 function App() {
   const [activeCategory, setActiveCategory] = useState<Categories>("websites");
+  const categoryProjects: Record<Categories, Project[]> = {
+    websites: websites,
+    ux: ux,
+    visuals: visuals,
+    misc: misc,
+  };
   return (
     <section className="app">
-      <Projects
-        title={activeCategory.toUpperCase()}
-        containerType="projects-grid"
-        projects={[
-          {
-            id: 1,
-            name: "Project One",
-            description: "Description for project one",
-            link: "#",
-            img: "img1.png",
-          },
-          {
-            id: 2,
-            name: "Project Two",
-            description: "Description for project two",
-            link: "#",
-            img: "img2.png",
-          },
-        ]}
-      />
       <Nav
         activeCategory={activeCategory}
         setActiveCategory={setActiveCategory}
+      />
+      <Projects
+        category={activeCategory}
+        projects={categoryProjects[activeCategory]}
       />
     </section>
   );

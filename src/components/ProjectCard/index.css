@@ -1,7 +1,13 @@
 .project-card {
   display: grid;
+  place-content: center;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
+  gap: 2rem;
+  margin: 0 4rem;
+}
+
+.project-card.visuals {
+  grid-template-columns: 1fr;
 }
 
 .project-card > a {
@@ -13,9 +19,16 @@
 }
 
 .project-card > img {
-  width: 20rem;
-  height: 15rem;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 2/1.5;
   border: 1px solid gray;
+  filter: grayscale(60%) drop-shadow(0 0);
+  transition: filter 400ms ease-in-out;
+}
+
+.project-card:hover > img {
+  filter: grayscale(0%) drop-shadow(5px 5px);
 }
 
 .project-card h3 {

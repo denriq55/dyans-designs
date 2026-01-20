@@ -1,7 +1,10 @@
 :root {
   --black: rgb(11, 11, 11);
   --white: rgb(249, 249, 249);
-  --light-gray: rgb(244, 244, 244);
+  --light-gray: rgb(239, 239, 239);
+  --pastel-pink: rgb(255, 242, 244);
+  --pastel-orange: rgb(255, 251, 243);
+  --pastel-green: rgb(236, 255, 236);
   --nav-radius: 25px;
 }
 
@@ -12,7 +15,7 @@
 }
 
 body {
-  padding: 2rem;
+  padding: 0.5rem 2rem;
   background-color: var(--white);
   display: grid;
   place-items: center;
