@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding: 2rem;
+  background-color: var(--white);
+  display: grid;
+  place-items: center;
+}
+
+.app {
+  max-width: 2000px;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  gap: 1rem;
+}

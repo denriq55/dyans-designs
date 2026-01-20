@@ -1,16 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Nav from "./components/Nav";
+import Projects from "./pages/Projects";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      
-    </>
-  )
+    <section className="app">
+      <Projects
+        title="WEBSITES"
+        container="projects-grid"
+        projects={[
+          {
+            id: 1,
+            name: "Project One",
+            description: "Description for project one",
+            link: "#",
+            img: "img1.png",
+          },
+          {
+            id: 2,
+            name: "Project Two",
+            description: "Description for project two",
+            link: "#",
+            img: "img2.png",
+          },
+        ]}
+      />
+      <Nav />
+    </section>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,9 @@
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project-card > a {
+  text-decoration: none;
+  color: var(--black);
+}
