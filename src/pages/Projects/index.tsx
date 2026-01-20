@@ -4,19 +4,23 @@ import ProjectCard from "../../components/ProjectCard";
 
 export default function Projects({
   title,
-  container,
+  containerType,
   projects,
 }: {
   title: string;
-  container: string;
+  containerType: string;
   projects: Project[];
 }) {
   return (
-    <div className="projects-container">
+    <div className="main-page">
       <h2>{title}</h2>
-      <div className={container}>
+      <div className="projects-wrapper">
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard
+            containerType={containerType}
+            key={project.id}
+            project={project}
+          />
         ))}
       </div>
     </div>

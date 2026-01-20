@@ -1,13 +1,16 @@
 import "./App.css";
+import { useState } from "react";
 import Nav from "./components/Nav";
 import Projects from "./pages/Projects";
+import type { Categories } from "./data/types";
 
 function App() {
+  const [activeCategory, setActiveCategory] = useState<Categories>("websites");
   return (
     <section className="app">
       <Projects
-        title="WEBSITES"
-        container="projects-grid"
+        title={activeCategory.toUpperCase()}
+        containerType="projects-grid"
         projects={[
           {
             id: 1,
@@ -25,7 +28,10 @@ function App() {
           },
         ]}
       />
-      <Nav />
+      <Nav
+        activeCategory={activeCategory}
+        setActiveCategory={setActiveCategory}
+      />
     </section>
   );
 }

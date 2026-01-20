@@ -4,3 +4,17 @@
   --light-gray: rgb(244, 244, 244);
   --nav-radius: 25px;
 }
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding: 2rem;
+  background-color: var(--white);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}

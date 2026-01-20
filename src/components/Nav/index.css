@@ -17,6 +17,13 @@
   padding: 1rem 0.5rem;
   border: 1px solid rgb(196, 196, 196);
   border: 1px solid rgb(196, 196, 196);
+  cursor: pointer;
+  transition: 200ms all ease-in;
+}
+
+.nav-container li.active {
+  background-color: black;
+  color: white;
 }
 
 .nav-container li:first-child {
